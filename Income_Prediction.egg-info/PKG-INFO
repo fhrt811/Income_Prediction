@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: Income-Prediction
+Version: 0.0.1
+Summary: Predicts the income of a person, whether it is above 50k or below 50k
+Author: Mohd Faisal Ansari
+Author-email: fhrt811@gmail.com
