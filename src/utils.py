@@ -1,8 +1,8 @@
 import os
 import pandas as pd
 import numpy as np
-import mysql.connector
-import pymongo
+# import mysql.connector
+# import pymongo
 import sys
 from src.logger import logging
 from src.exception import CustomException

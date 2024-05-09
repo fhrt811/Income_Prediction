@@ -4,3 +4,14 @@ Income_Prediction.egg-info/PKG-INFO
 Income_Prediction.egg-info/SOURCES.txt
 Income_Prediction.egg-info/dependency_links.txt
 Income_Prediction.egg-info/top_level.txt
+src/__init__.py
+src/exception.py
+src/logger.py
+src/utils.py
+src/component/__init__.py
+src/component/data_ingestion.py
+src/component/data_transformation.py
+src/component/model_trainer.py
+src/pipeline/__init__.py
+src/pipeline/prediction_pipeline.py
+src/pipeline/training_pipeline.py
