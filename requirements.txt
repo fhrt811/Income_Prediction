@@ -5,6 +5,7 @@ imb-learn
 seaborn
 matplotlib
 Flask
+Pylance
 pymongo
-mysql
+mysql.connector
 -e .

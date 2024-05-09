@@ -1,0 +1,5 @@
+[2024-05-09 21:29:00,927] 24 root - INFO - Data ingestion started
+[2024-05-09 21:29:01,095] 27 root - INFO - Dataset read as pandas dataframe
+[2024-05-09 21:29:01,153] 29 root - INFO - Dropping the duplicate records from the dataset
+[2024-05-09 21:29:01,830] 34 root - INFO - Train-Test split
+[2024-05-09 21:29:02,498] 38 root - INFO - Data ingestion has been completed
