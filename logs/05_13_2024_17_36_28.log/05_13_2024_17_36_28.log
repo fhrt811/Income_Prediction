@@ -1,0 +1,4 @@
+[2024-05-13 17:36:36,912] 25 root - INFO - Data ingestion started
+[2024-05-13 17:36:37,124] 28 root - INFO - Dataset read as pandas dataframe
+[2024-05-13 17:36:37,226] 30 root - INFO - Dropping the duplicate records from the dataset
+[2024-05-13 17:36:37,360] 48 root - INFO - Exception occured at data ingestion stage

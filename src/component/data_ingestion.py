@@ -6,8 +6,9 @@ import numpy as np
 from src.logger import logging
 from src.exception import CustomException
 from sklearn.model_selection import train_test_split
-from src.utils import strip_text
+from src.utils import strip_text, underscore
 from dataclasses import dataclass
+from src.component.data_transformation import DataTransformation
 
 # Defining class DataIngestionConfig
 @dataclass
@@ -28,6 +29,8 @@ class DataIngestion:
             df.drop_duplicates(keep='first',inplace=True)
             logging.info('Dropping the duplicate records from the dataset')
             df = strip_text(df) # Removing the extra space from the records
+            df = underscore(df) # Removing the hyphen and applying under score in the column names
+            
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False)
             
@@ -48,3 +51,6 @@ class DataIngestion:
 if __name__ == "__main__":
     obj=DataIngestion()
     train_data,test_data = obj.initiate_data_ingestion()
+    # # Running data_transformation
+    Data_transformation=DataTransformation()
+    train_arr,test_arr,_=Data_transformation.initiate_data_transformation(train_data,test_data)

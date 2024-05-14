@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
+import pickle
 # import mysql.connector
 # import pymongo
 import sys
@@ -29,7 +30,7 @@ def read_from_Mongo(uri,db_name,conn_name,query):
         mongo_client=pymongo.MongoClient(uri)
         database=mongo_client[db_name]
         collection=database[conn_name]
-        df=pd.DataFrame(i for i in connection.find({query}))
+        df=pd.DataFrame(i for i in collection.find({query}))
         return df
         logging.info('Dataset read successfully from MongoDB')
     except Exception as e:
@@ -47,4 +48,27 @@ def strip_text(df):
     return df
 
 # Function for saving the objects:
-# def save_objects(file_path, obj):
+def save_objects(file_path, obj):
+    try:
+        dir_path=os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
+        with open(file_path,'wb') as file_obj:
+            pickle.dump(obj,file_obj)
+    except Exception as e:
+        logging.info('Error occured in saving object')
+        raise CustomException(e,sys)
+    
+
+#Function for loading objects
+def load_object(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info('Error occured in loading object')
+        raise CustomException(e,sys)
+    
+# Replacing the hyphen sigh with the underscore in the column names 
+def underscore(df):
+    df.columns = df.columns.map(lambda x:x.replace('-','_'))
+    return df
