@@ -24,5 +24,3 @@ There are 14 Independent Variables.
 Target Varibale:
 
 - income: >50K, <=50K.
-
-Dataset Source Link : https://archive.ics.uci.edu/ml/datasets/census+income
