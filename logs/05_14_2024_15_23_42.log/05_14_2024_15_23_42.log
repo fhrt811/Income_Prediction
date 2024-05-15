@@ -1,8 +1,0 @@
-[2024-05-14 15:23:42,561] 97 werkzeug - WARNING -  * Debugger is active!
-[2024-05-14 15:23:42,601] 97 werkzeug - INFO -  * Debugger PIN: 114-516-166
-[2024-05-14 15:23:48,882] 97 werkzeug - INFO - 127.0.0.1 - - [14/May/2024 15:23:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-[2024-05-14 15:23:58,376] 97 werkzeug - INFO - 127.0.0.1 - - [14/May/2024 15:23:58] "GET /predict HTTP/1.1" 200 -
-[2024-05-14 15:23:58,407] 97 werkzeug - INFO - 127.0.0.1 - - [14/May/2024 15:23:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-[2024-05-14 15:24:30,996] 76 root - INFO - Dataframe gathered
-[2024-05-14 15:24:33,692] 97 werkzeug - INFO - 127.0.0.1 - - [14/May/2024 15:24:33] "POST /predict HTTP/1.1" 200 -
-[2024-05-14 15:25:03,647] 97 werkzeug - INFO - 127.0.0.1 - - [14/May/2024 15:25:03] "GET /predict HTTP/1.1" 200 -
