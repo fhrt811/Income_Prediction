@@ -26,4 +26,4 @@ Target Varibale:
 - income: >50K, <=50K.
 
 
-This Application will predict the salary of a person
+This Application will predict the salary of a person.
